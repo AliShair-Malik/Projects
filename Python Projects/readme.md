@@ -5,6 +5,8 @@ This is Some Basic Projects Develop in Python.
 ## Projects
 
 1. **Guess the Fruit:** You can Guess a Fruit Name with random module.
+<summary>Two Version
+<details>Op
 
 2. **Guess the Number:** Guess the number between 10 to 20 using random module.
 
