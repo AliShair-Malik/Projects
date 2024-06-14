@@ -95,7 +95,7 @@ def customer():
 
         option = input("\nDo you need other Order(Yes/No): ")
 
-    print(f"\nSir This Your Total Amount is {total_price}")
+    print(f"\nSir Your Total Amount is {total_price}")
 
 def main():
     print("Welcome to Python Restaurant\n")
