@@ -11,8 +11,8 @@ def choose_words():
 
     return random.choice(words)
 
-def hangman_display(teris):
-    stage = [
+def display_hangman(teris):
+    stages = [
        """
          ------
          |    |
@@ -78,7 +78,7 @@ def hangman_display(teris):
         """
     ]
 
-    return stage[teris]
+    return stages[teris]
 
 def play_hangman():
     word = choose_words()
@@ -89,7 +89,7 @@ def play_hangman():
     print("Welcome to Hangman Game\n")
 
     while teris > 0 and len(word_letters) > 0:
-        print(hangman_display(teris))
+        print(display_hangman(teris))
         print(f"You have only {teris} teris")
         print("Guess Letters:", ' '.join(sorted(guessed_letters)))
 
@@ -99,7 +99,7 @@ def play_hangman():
         guess = input("Guess the Letter: ").lower()
 
         if guess in guessed_letters:
-            print(f"You already guessed {guess} ! Trt Again")
+            print(f"You already guessed {guess} ! Try Again")
         elif guess in word_letters:
             guessed_letters.add(guess)
             word_letters.remove(guess)
@@ -112,6 +112,7 @@ def play_hangman():
     if len(word_letters) == 0:
         print("Congratulation You Win the Word is", word)
     else:
+        print(display_hangman(teris))
         print("You ran out of Teris, the Word is", word)
 
 play_hangman()
